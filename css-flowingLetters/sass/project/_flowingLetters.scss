@@ -1,0 +1,22 @@
+.flowingLetters {
+  width: 100%;
+  overflow: hidden;
+
+  p {
+    font-size: 100px;
+    font-weight: bolder;
+    display: inline-block;
+    padding-left: 100%;
+    white-space: nowrap;
+    animation: moving_text 10s linear infinite;
+  }
+}
+
+@keyframes moving_text {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
