@@ -1,0 +1,49 @@
+// breakpoint
+$break1: 320;
+$break2: 480;
+$break3: 600;
+$break4: 760;
+$break5: 960;
+$break6: 1280;
+$breakpoints: (
+  // br以上
+  "o-br1": "print, screen and (min-width: #{$break1 + 1}px)",
+  "o-br2": "print, screen and (min-width: #{$break2 + 1}px)",
+  "o-br3": "print, screen and (min-width: #{$break3 + 1}px)",
+  "o-br4": "print, screen and (min-width: #{$break4 + 1}px)",
+  "o-br5": "print, screen and (min-width: #{$break5 + 1}px)",
+  "o-br6": "print, screen and (min-width: #{$break6 + 1}px)",
+  // br以下
+  "u-br1": "print, screen and (max-width: #{$break1}px)",
+  "u-br2": "print, screen and (max-width: #{$break2}px)",
+  "u-br3": "print, screen and (max-width: #{$break3}px)",
+  "u-br4": "print, screen and (max-width: #{$break4}px)",
+  "u-br5": "print, screen and (max-width: #{$break5}px)",
+  "u-br6": "print, screen and (max-width: #{$break5}px)"
+) !default;
+@mixin mq($breakpoint) {
+  @media #{inspect(map-get($breakpoints, $breakpoint))} {
+    @content;
+  }
+}
+
+// ie用
+@mixin ie {
+  @media all and (-ms-high-contrast: none) {
+    @content;
+  }
+}
+
+// PATH
+// $bgPath: '../../assets/images/';
+
+// COLOR
+$cWhite: white;
+$cBlack: black;
+$cSubTitle: #535353;
+$cBgGray: #eaebe6;
+$cWineRed: #904669;
+$contentMaxWidth: 1070px;
+$navHeight: 100px;
+$neon-color1:#03e9f4;
+$neon-color2:#03f44f;
