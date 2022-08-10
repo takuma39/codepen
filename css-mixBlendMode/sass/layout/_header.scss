@@ -1,0 +1,29 @@
+/*// ----------------------
+// header
+// ----------------------*/
+.header {
+  height: 100px;
+  background-color: #40b5fa;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.header__container {
+  @include container();
+
+  h1 {
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 4px;
+    border-bottom: 1px dotted #fff;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 4px;
+  }
+}

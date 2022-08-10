@@ -1,0 +1,16 @@
+.test {
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+
+  p {
+    position: absolute;
+    mix-blend-mode: overlay;
+    // color: blue;
+    font-size: 80px;
+    font-weight: bold;
+    top: 0px;
+  }
+}
