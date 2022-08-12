@@ -1,0 +1,18 @@
+.test {
+  height: 3000px;
+
+  p {
+    position: fixed;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.bar {
+  position: fixed;
+  top: 100px;
+  height: 8px;
+  width: 0%;
+  background-color: rgb(223, 167, 76);
+}
