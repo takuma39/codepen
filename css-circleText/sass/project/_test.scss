@@ -1,0 +1,39 @@
+$diameter: 300px; // 直径
+$radius: $diameter / 2; // 半径
+$fontSize: 30px;
+
+.circle-text {
+  position: relative;
+  width: $diameter; // 直径
+  height: $diameter; // 直径
+  font-size: $fontSize;
+  text-align: center;
+  transform: rotate(-80deg); // 円の回転
+  animation: rotate 10s linear infinite;
+
+  span {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 15px);/* 中心点、、文字サイズ分ずらす */
+    display: inline-block;
+    width: $fontSize; // 文字サイズより小さくしない
+    height: $radius; // 半径
+    transform-origin: center bottom; // 回転の基準点
+    // border: solid 1px;
+
+    @for $i from 1 through 12 {
+      &:nth-child(#{$i}) {
+        transform: rotate((30 * $i)-30deg);
+      }
+    }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
